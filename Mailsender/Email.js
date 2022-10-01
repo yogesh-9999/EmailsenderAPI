@@ -1,5 +1,5 @@
 const nm=require('nodemailer')
-
+require('dotenv').config();
 
 const mailsender= (mailid)=>{
     const msg={
@@ -13,7 +13,7 @@ const mailsender= (mailid)=>{
     service:'gmail',
     auth:{
         user:"uvishnu9186@gmail.com",
-        pass:"mxjabqvmeysagpzg",
+        pass:process.env.emailpass,
 
     },
     port:465,
